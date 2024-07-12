@@ -44,43 +44,27 @@ logger.setLevel(logging.CRITICAL)
 ```
 
 ## Set Virtual Engineering Options
-### 0. Feedstock properties
-Set the feedstock properties.
 
 ```python
+# Set the feedstock properties.
 fs_options = csv2widget_collection("feedstock_params.csv")
 fs_options.display_all_widgets()
 ```
 
-### 1. Pretreatment Operation
-
-Set the options for the pretreatment operation below.
-
 ```python
+# Set the options for the pretreatment operation below.
 pt_options = csv2widget_collection("pretreatment_params.csv")
 pt_options.display_all_widgets()
 ```
 
----
-
-### 2. Enzymatic Hydrolysis Operation
-
-Set the options for the enzymatic hydrolysis operation using either a two-phase reaction rate model or high-fidelity CFD below.
-
-
 ```python
+# Set the options for the enzymatic hydrolysis operation using either a two-phase reaction rate model or high-fidelity CFD below
 eh_options = csv2widget_collection("enzymatic_hydrolysis_params.csv")
 eh_options.display_all_widgets()
 ```
 
----
-
-### 3. Bioreaction Operation
-
-Set the options for the bubble column bioreaction operation below.
-
-
 ```python
+# Set the options for the bubble column bioreaction operation below.
 br_options = csv2widget_collection("bioreactor_params.csv")
 br_options.display_all_widgets()
 ```

@@ -24,11 +24,15 @@ def run_pt(ve_params=None, verbose=True, show_plots=True):
     PT.build_problem(ve_params)
 
     if ve_params is None:
-        t_final = 1200.0
+        t_final = 1200
+        dt =  2
+        save_t = dt
     else:
         t_final = ve_params.pt_in["final_time"]  # in seconds
+        dt = min(2.0, t_final/10)
+        save_t = 30.0
 
-    PT.solve(t_final=t_final, dt=2.0, save_every=30.0)
+    PT.solve(t_final=t_final, dt=dt, save_every=save_t)
     if show_plots:
         print(show_plots)
         draw_figures(t_final, PT.path_to_data_files)

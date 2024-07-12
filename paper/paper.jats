@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Software</journal-title>
+<abbrev-journal-title>JOSS</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2475-9066</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">0</article-id>
+<article-id pub-id-type="doi">N/A</article-id>
+<title-group>
+<article-title>Virtual Engineering: A Python package for low-temperature
+biomass conversion</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes">
+<name>
+<surname>Young</surname>
+<given-names>Ethan</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="corresp" rid="cor-1"><sup>*</sup></xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Sitaraman</surname>
+<given-names>Hariswaran</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Doronina</surname>
+<given-names>Olga</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Glaws</surname>
+<given-names>Andrew</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Carlson</surname>
+<given-names>Nicholas</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>National Renewable Energy Laboratory, USA</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<author-notes>
+<corresp id="cor-1">* E-mail: <email></email></corresp>
+</author-notes>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-11-09">
+<day>9</day>
+<month>11</month>
+<year>2023</year>
+</pub-date>
+<volume>¿VOL?</volume>
+<issue>¿ISSUE?</issue>
+<fpage>¿PAGE?</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Python</kwd>
+<kwd>simulation</kwd>
+<kwd>biofuel</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>Virtual Engineering (VE) is a software framework that accelerates
+  research and development and reduces risks for market-relevant biomass
+  conversion processes. VE package supports multi-physics models of unit
+  operations and joins them to simulate the entire end-to-end process of
+  low-temperature conversion of lignocellulosic biomass to a fuel
+  precursor. The framework includes a user-friendly interface that helps
+  engineers seamlessly connect unit operations and enable optimization.
+  We currently support multiple models, computing paradigms, and
+  fidelities representing the steps of feedstock pretreatment, enzymatic
+  hydrolysis, and bioconversion. Although the VE approach was developed
+  to support a biomass workflow, we have designed each component in a
+  way that allows us to easily support new domains, unit models, and
+  feedstocks.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of need</title>
+  <p>Currently, process-modeling TEA does not utilize state-of-the-art
+  mechanistic models</p>
+  <p>First-of-kind systems-modeling approach for biomass conversion</p>
+</sec>
+<sec id="methods">
+  <title>Methods</title>
+  <p>Jupyter notebooks and Python programming used to create a graphical
+  user interface (GUI).</p>
+  <p>The vebio Python package (developed in this project) contains
+  functionality to create and interact with GUI elements and facilitate
+  information transfer between unit operation models.</p>
+  <p>Sub-models written in different programming languages and have
+  different computing needs: high-fidelity models (CFD simulations) of
+  unit operations are automatically submitted to the NREL HPC scheduler,
+  while lower-fidelity models and surrogates are run directly on the
+  user’s workstation.</p>
+</sec>
+<sec id="mention-a-representative-set-of-past-or-ongoing-research-projects-using-the-software-and-recent-scholarly-publications-enabled-by-it">
+  <title>(Mention a representative set of past or ongoing research
+  projects using the software and recent scholarly publications enabled
+  by it)</title>
+  <p>Automatic TEA analysis of novel bioreactor designs. Scale up of
+  bioreactor models. Adaptive computing is a new engagement, generally
+  speaking, projects which need multi-fidelity, multi-scale support to
+  build and connect models for simulations and optimizations.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>This work was authored by the National Renewable Energy Laboratory,
+  operated by Alliance for Sustainable Energy, LLC, for the U.S.
+  Department of Energy (DOE) under Contract No. DE-AC36-08GO28308.
+  Funding provided by U.S. Department of Energy Bioenergy Technologies
+  Office (BETO). The views expressed in the article do not necessarily
+  represent the views of the DOE or the U.S. Government. The U.S.
+  Government retains and the publisher, by accepting the article for
+  publication, acknowledges that the U.S. Government retains a
+  nonexclusive, paid-up, irrevocable, worldwide license to publish or
+  reproduce the published form of this work, or allow others to do so,
+  for U.S. Government purposes.</p>
+</sec>
+</body>
+<back>
+</back>
+</article>
