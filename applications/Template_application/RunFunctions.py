@@ -8,7 +8,7 @@ from vebio.FileModifiers import write_file_with_replacements
 from vebio.Utilities import check_dict_for_nans, dict_to_yaml, yaml_to_dict, print_dict
 from vebio.WidgetFunctions import OptimizationWidget
 
-root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'models'))
+root_path = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 cwd = os.getcwd()
 
 class VE_params(object):
@@ -60,7 +60,7 @@ class Model1:
                 else:
                     setattr(self, widget_name, widget.value)
 
-        self.model1_module_path = os.path.join(root_path, 'model1')
+        self.model1_module_path = os.path.join(root_path, 'models', 'model1')
         sys.path.append(self.model1_module_path)
 
     ##############################################
@@ -101,7 +101,18 @@ class Model1:
     ### run model
     ##############################################
     def run(self, verbose=False):
-        self.ve.model1_out = run_model1() 
+
+        if not self.hpc_run:
+            from model1 import run_model1
+            self.ve.model1_out = run_model1(self.ve) 
+        else:
+            os.chdir(self.model1_module_path)
+            self.ve.write_to_file('ve_params.yml')
+            command = f'python run_model1.py'
+            subprocess.call(command.split(), text=True)
+            self.ve = VE_params.load_from_file('ve_params.yml', verbose=False)
+            os.chdir(root_path)
+        
         if check_dict_for_nans(self.ve.model1_out):
             return True
         return False

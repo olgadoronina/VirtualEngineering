@@ -1,3 +1,3 @@
 
-def run_model1():
-    return 1
+def run_model1(ve):
+    return {"model1_output": 5}
