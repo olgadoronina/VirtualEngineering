@@ -4,8 +4,8 @@ import numpy as np
 
 # imports from vebio modules
 from vebio.WidgetFunctions import csv2widget_collection
-from vebio.RunFunctions import Pretreatment, Feedstock, EnzymaticHydrolysis, Bioreactor, VE_params
-from vebio.OptimizationFunctions import Optimization
+from RunFunctions import Pretreatment, Feedstock, EnzymaticHydrolysis, Bioreactor, VE_params
+from applications.Bioconversion.OptimizationFunctions import Optimization
 
 
 hpc_run = True
