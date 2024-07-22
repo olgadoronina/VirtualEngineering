@@ -1,0 +1,35 @@
+feedstock:
+  xylan_solid_fraction: 0.263
+  glucan_solid_fraction: 0.4
+  initial_porosity: 0.8
+pt_in:
+  initial_acid_conc: 0.0001
+  steam_temperature: 423.15
+  initial_solid_fraction: 0.745
+  final_time: 498.00000000000006
+eh_in:
+  lambda_e: 0.03
+  fis_0: 0.1
+  t_final: 24.0
+  model_type: CFD Surrogate
+br_in:
+  gas_velocity: 0.08
+  column_height: 40.0
+  column_diameter: 5.0
+  bubble_diameter: 0.006
+  t_final: 100.0
+  model_type: CFD Surrogate
+pt_out:
+  fis_0: 0.17520818513181413
+  conv: 0.8880054290562949
+  X_X: 0.045486271199255364
+  X_G: 0.5218835069033171
+  rho_x: 76.86117494099321
+  rho_f: 0.5882299279261706
+eh_out:
+  rho_g: 24.525475004251998
+  rho_x: 23.25060382832063
+  rho_sL: 3.2420791452333777
+  rho_f: 0.16786599538247268
+br_out:
+  our: 68.39779404542315

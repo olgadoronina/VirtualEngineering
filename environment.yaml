@@ -1,4 +1,4 @@
-name: virteng-env
+name: virteng_env
 channels:
   - conda-forge
   - defaults
@@ -18,4 +18,4 @@ dependencies:
   - pip
   - pip:
     - -e .
-prefix: /opt/anaconda3/envs/virteng-env
+prefix: /opt/anaconda3/envs/virteng_env
